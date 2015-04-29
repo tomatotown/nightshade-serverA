@@ -30,4 +30,5 @@
 * 文档语法 API Blueprint
 
 ###第三方服务
-* 环信  
+* [环信](http://www.easemob.com/)
+    * [API文档](http://www.easemob.com/docs/gettingstart/)  
