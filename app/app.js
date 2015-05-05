@@ -14,6 +14,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 var routes = require('./controllers');
 app.use('/', routes);
 
+var config = require('../config');
+var mongoose = require('mongoose');
+mongoose.connect(config.database.url);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

@@ -15,16 +15,22 @@
     * [sublime text 3](http://www.sublimetext.com/3)
 
 ###数据库初始化与迁移(TBD)
-1. 安装[MongoDB](http://www.mongodb.org/downloads)
+1. 安装[MongoDB](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
+``brew update``  
+``brew install mongodb``
 
 ###启动服务
 1. 启动ServerA  
 ``node server.js``  
 
+###测试
+1. 运行测试  
+``./node_modules/.bin/mocha``  
+
 ###技术栈
-* 后端 nodejs(0.12.1)/express.js  
-* 持久化 mongoDB/mongoose  
-* 测试 mocha
+* 后端 Node.js(0.12.1)/[Express.js](http://expressjs.com/4x/api.html)  
+* 持久化 MongoDB/mongoose  
+* 测试 [Mocha](http://mochajs.org/)/[SuperTest](https://github.com/visionmedia/supertest)
 * 文档语法 API Blueprint
 
 ###第三方服务

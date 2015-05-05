@@ -1,8 +1,8 @@
 #ServerA API文档
 
-## 用户登录 [/v1/auth]
+## 用户登录 [/v1/login]
 
-### 根据ID获得某个用户信息 [POST]
+### 验证用户身份 [POST]
 + Request (application/json; charset=utf-8)
     + Body  
 
@@ -19,7 +19,7 @@
                 "username":"测试用户1",
                 "email":"test1@tomatotown.com",
                 "mobile":"12345678910",
-                "easemobId": "1",
+                "emUsername": "1",
                 "createdAt": "2015-03-23 15:34:42",
                 "updatedAt": "2015-03-23 15:34:42"
             }
@@ -47,7 +47,7 @@
                 "username":"测试用户1",
                 "email":"test1@tomatotown.com",
                 "mobile":"12345678910",
-                "easemobId": "1",
+                "emUsername": "1",
                 "createdAt": "2015-03-23 15:34:42",
                 "updatedAt": "2015-03-23 15:34:42"
             }
@@ -67,7 +67,7 @@
                     "username":"测试用户1",
                     "email":"test1@tomatotown.com",
                     "mobile":"12345678910",
-                    "easemobId": "1",
+                    "emUsername": "1",
                     "createdAt": "2015-03-23 15:34:42",
                     "updatedAt": "2015-03-23 15:34:42"
                 }
@@ -85,11 +85,11 @@
                 {
                     "id":"1",
                     "username":"测试用户1",
-                    "easemobId": "1"
+                    "emUsername": "1"
                 },
                 {
                     "id":"2",
                     "username":"测试用户2",
-                    "easemobId": "2"
+                    "emUsername": "2"
                 }
             ]
