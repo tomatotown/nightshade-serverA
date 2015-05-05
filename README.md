@@ -14,14 +14,12 @@
     * [atom](https://atom.io/) 或
     * [sublime text 3](http://www.sublimetext.com/3)
 
-
 ###数据库初始化与迁移(TBD)
-
+1. 安装[MongoDB](http://www.mongodb.org/downloads)
 
 ###启动服务
 1. 启动ServerA  
 ``node server.js``  
-
 
 ###技术栈
 * 后端 nodejs(0.12.1)/express.js  
