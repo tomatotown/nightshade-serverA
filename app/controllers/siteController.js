@@ -9,9 +9,14 @@ router.get('/', function(req, res) {
 router.post('/login', function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
-    user.find({username: username, password: password}, function (err, user) {
-        if (!err) {
-            res.json({"username": user[0].username, "password": user[0].password});
+    user.find({username: username, password: password}, function (err, users) {
+        if (!err & users.count != 0) {
+            res.json({
+                "username": users[0].username,
+                "email" : users[0].email,
+                "mobile": users[0].mobile,
+                "emUsername": users[0].emUsername
+            });
         } else {
             res.json({status: "error"});
         }

@@ -2,8 +2,8 @@
     "app" : {
         "port" : 9000
     },
-    "database" : {
-        "url": "mongodb://localhost:27017/nightshade_dev"
+    "db" : {
+        "host": "localhost:27017",
+        "name": "nightshade_dev"
     }
-
 }

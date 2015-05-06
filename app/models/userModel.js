@@ -5,7 +5,10 @@ var userModel = function () {
 
     var schema = mongoose.Schema({
         username: String,
-        password: String
+        password: String,
+        email: String,
+        mobile: String,
+        emUsername: String
     });
 
     return mongoose.model('User', schema);

@@ -1,27 +1,16 @@
 #ServerA API文档
 
-## 用户登录 [/v1/login]
+## 用户登录 [/v1/login/?username=test1&password=123123]
 
 ### 验证用户身份 [POST]
-+ Request (application/json; charset=utf-8)
-    + Body  
-
-            {
-                "username":"测试用户1",
-                "password": "123123"
-            }
-
 + Response 200 (application/json; charset=utf-8)
     + Body
 
             {
-                "id":"1",
-                "username":"测试用户1",
+                "username":"test1",
                 "email":"test1@tomatotown.com",
                 "mobile":"12345678910",
-                "emUsername": "1",
-                "createdAt": "2015-03-23 15:34:42",
-                "updatedAt": "2015-03-23 15:34:42"
+                "emUsername": "test1"
             }
 
 ## 创建用户 [/v1/user/]
@@ -33,9 +22,9 @@
     + Body  
 
             {
-                "username":"测试用户1",
+                "username":"test3",
                 "password": "123123",
-                "email":"test1@tomatotown.com",
+                "email":"test3@tomatotown.com",
                 "mobile":"12345678910",
             }
 
@@ -44,12 +33,10 @@
 
             {
                 "id":"1",
-                "username":"测试用户1",
-                "email":"test1@tomatotown.com",
+                "username":"test3",
+                "email":"test3@tomatotown.com",
                 "mobile":"12345678910",
-                "emUsername": "1",
-                "createdAt": "2015-03-23 15:34:42",
-                "updatedAt": "2015-03-23 15:34:42"
+                "emUsername": "test3"
             }
 
 
@@ -64,12 +51,10 @@
             [
                 {
                     "id":"1",
-                    "username":"测试用户1",
-                    "email":"test1@tomatotown.com",
+                    "username":"test3",
+                    "email":"test3@tomatotown.com",
                     "mobile":"12345678910",
-                    "emUsername": "1",
-                    "createdAt": "2015-03-23 15:34:42",
-                    "updatedAt": "2015-03-23 15:34:42"
+                    "emUsername": "test3"
                 }
             ]
 
@@ -84,12 +69,12 @@
             [
                 {
                     "id":"1",
-                    "username":"测试用户1",
-                    "emUsername": "1"
+                    "username":"test1",
+                    "emUsername": "test1"
                 },
                 {
                     "id":"2",
-                    "username":"测试用户2",
-                    "emUsername": "2"
+                    "username":"test2",
+                    "emUsername": "test2"
                 }
             ]

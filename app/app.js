@@ -12,11 +12,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 var routes = require('./controllers');
-app.use('/', routes);
+app.use('/v1', routes);
 
 var config = require('../config');
 var mongoose = require('mongoose');
-mongoose.connect(config.database.url);
+mongoose.connect("mongodb://" + config.db.host + "/" + config.db.name);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
