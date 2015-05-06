@@ -13,6 +13,7 @@ describe('auth', function(){
                 .send('username=test1&password=1234')
                 .expect(200)
                 .end(function(err, res){
+                    res.body.should.have.property('id');
                     res.body.should.have.property('username', 'test1');
                     res.body.should.have.property('email', 'test1@tomatotown.com');
                     res.body.should.have.property('mobile', '12345678910');

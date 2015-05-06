@@ -8,7 +8,8 @@ var userModel = function () {
         password: String,
         email: String,
         mobile: String,
-        emUsername: String
+        emUsername: String,
+        friends: Array
     });
 
     return mongoose.model('User', schema);

@@ -12,6 +12,7 @@ router.post('/login', function(req, res) {
     user.find({username: username, password: password}, function (err, users) {
         if (!err & users.count != 0) {
             res.json({
+                "id": users[0].id,
                 "username": users[0].username,
                 "email" : users[0].email,
                 "mobile": users[0].mobile,

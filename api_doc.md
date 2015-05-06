@@ -7,6 +7,7 @@
     + Body
 
             {
+                "id":"1",
                 "username":"test1",
                 "email":"test1@tomatotown.com",
                 "mobile":"12345678910",
@@ -58,7 +59,7 @@
                 }
             ]
 
-## 用户好友列表 [/v1/user/{userId}/friends]
+## 用户好友列表 [/v1/user/{username}/friends]
 + Parameters
     + userId (string, `12345`) ... 希望得到的用户ID.
 

@@ -29,7 +29,7 @@
 
 ###技术栈
 * 后端 Node.js(0.12.1)/[Express.js](http://expressjs.com/4x/api.html)  
-* 持久化 MongoDB/mongoose  
+* 持久化 MongoDB/[mongoose](http://mongoosejs.com/docs/guide.html)  
 * 测试 [Mocha](http://mochajs.org/)/[SuperTest](https://github.com/visionmedia/supertest)
 * 文档语法 API Blueprint
 
