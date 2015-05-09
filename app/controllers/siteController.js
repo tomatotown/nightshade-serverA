@@ -7,8 +7,8 @@ router.get('/', function(req, res) {
 });
 
 router.post('/login', function(req, res) {
-    var username = req.body.username;
-    var password = req.body.password;
+    var username = req.query.username;
+    var password = req.query.password;
     user.find({username: username, password: password}, function (err, users) {
         if (!err & users.count != 0) {
             res.json({

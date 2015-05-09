@@ -8,9 +8,8 @@ describe('auth', function(){
     describe('POST /v1/login', function(){
         it('should login with correct username and password', function(done){
             request(app)
-                .post('/v1/login')
+                .post('/v1/login?username=test1&password=1234')
                 .type('urlencoded')
-                .send('username=test1&password=1234')
                 .expect(200)
                 .end(function(err, res){
                     res.body.should.have.property('id');
