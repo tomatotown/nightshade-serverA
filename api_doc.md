@@ -1,6 +1,6 @@
 #ServerA API文档
 
-## 用户登录 [/v1/login/?username=test1&password=123123]
+## 家长身份验证 [/v1/login/parent?mobile=12345678901&password=123456789]
 
 ### 验证用户身份 [POST]
 + Response 200 (application/json; charset=utf-8)
@@ -9,24 +9,22 @@
             {
                 "id":"1",
                 "username":"test1",
-                "email":"test1@tomatotown.com",
-                "mobile":"12345678910",
                 "emUsername": "test1"
             }
 
-## 创建用户 [/v1/user/]
-+ Parameters
-    + userId (string, `12345`) ... 希望得到的用户ID.
+# 家长管理
 
-### 创建一个用户 [POST]
+## 创建家长 [/v1/parent/]
+
+### 创建一个家长 [POST]
 + Request (application/json; charset=utf-8)
     + Body  
 
             {
-                "username":"test3",
-                "password": "123123",
-                "email":"test3@tomatotown.com",
+                "name":"测试用户3",
                 "mobile":"12345678910",
+                "gender": "女",
+                "nickName": "妞妞的妈妈"
             }
 
 + Response 201 (application/json; charset=utf-8)
@@ -35,17 +33,19 @@
             {
                 "id":"1",
                 "username":"test3",
-                "email":"test3@tomatotown.com",
+                "emUsername": "test3",
+                "name":"测试用户3",
                 "mobile":"12345678910",
-                "emUsername": "test3"
+                "gender": "女",
+                "nickName": "妞妞的妈妈"
             }
 
 
-## 用户信息 [/v1/user/{userId}]
+## 家长信息 [/v1/parent/{parentId}]
 + Parameters
     + userId (string, `12345`) ... 希望得到的用户ID.
 
-### 根据ID获得某个用户信息 [GET]
+### 根据ID获得某个家长信息 [GET]
 + Response 200 (application/json; charset=utf-8)
     + Body
 
@@ -59,11 +59,11 @@
                 }
             ]
 
-## 用户好友列表 [/v1/user/{username}/friends]
+## 好友列表 [/v1/parent/{username}/friends]
 + Parameters
     + userId (string, `12345`) ... 希望得到的用户ID.
 
-### 根据ID获得某个用户信息 [GET]
+### 根据ID获得某个家长的好友信息 [GET]
 + Response 200 (application/json; charset=utf-8)
     + Body
 
